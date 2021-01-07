@@ -1,0 +1,14 @@
+
+{% extends 'survquest/base.html' %}
+
+{% block content %}
+
+    <h1>New survey</h1>
+    <form method="POST" class="surv-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+    </body>
+</html>
+
+{% endblock %}

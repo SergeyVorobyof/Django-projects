@@ -1,0 +1,16 @@
+{% extends 'survquest/base.html' %}
+
+{% block content %}
+
+        <!--<a href="{% url 'surv_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>-->
+
+	    <div class="survey">
+		{% if survey.published_date %}
+		    <div class="date">
+		        {{ survey.published_date }}
+		        finish: {{ survey.finished_date }}
+		    </div>
+		{% endif %}
+		<h1>{{ survey.title }}</h1>
+	    </div>
+{% endblock %}

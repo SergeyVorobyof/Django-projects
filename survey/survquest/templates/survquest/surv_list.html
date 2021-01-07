@@ -1,0 +1,12 @@
+{% extends 'survquest/base.html' %}
+    {% block content %}
+		            {% for survey in surveys %}
+		                <div class="survey">
+		                    <div class="date">
+		                        <p>Опубликовано: {{ survey.published_date }}</p>
+		                    </div>
+		                    <h1><a href="{% url 'surv_detail' pk=survey.pk %}">{{ survey.title }}</a></h1>
+		                    
+		                </div>
+		            {% endfor %}
+    {% endblock %}
